@@ -5,7 +5,11 @@ export default {
     'node_modules/preline/dist/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        "main": ["main", "sans-serif"]
+      }
+    },
   },
   plugins: [
     require('preline/plugin')
