@@ -1,4 +1,4 @@
-export const UserMessage = (text) => {
+const UserMessage = (text) => {
     return `
         <!-- Chat Bubble -->
         <li class="py-2 sm:py-4">
@@ -19,7 +19,7 @@ export const UserMessage = (text) => {
         <!-- End Chat Bubble -->`;
 }
 
-export const BotMessage = (text) => {
+const BotMessage = (text) => {
     return `
         <!-- Chat Bubble -->
         <li class="max-w-4xl py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4">
@@ -41,4 +41,8 @@ export const BotMessage = (text) => {
         </div>
         </li>
         <!-- End Chat Bubble -->`;
+}
+export const generateMessage = (text, type) =>  {
+    if(type === 'user') return UserMessage(text);
+    return BotMessage(text);
 }
