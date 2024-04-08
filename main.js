@@ -31,8 +31,7 @@ const generateResponse = (chatElement) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-
-            "Authorization": `Bearer ` + process.env.API_KEY 
+            "Authorization": `Bearer sk-8IcVsAImqrk7JJKaeebBT3BlbkF` + "JN7obCHhZeUPJt86EyiYf"
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
