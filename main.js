@@ -1,4 +1,4 @@
-import { UserMessage } from './Message';
+import { generateMessage } from './Message';
 import './style.css'
 
 let userMessage = null;
@@ -24,11 +24,7 @@ const handleInpur = () => {
 
 
 window.addEventListener('keypress', (e) => {
-    if(e.key === 'a') {
-        
-        chatEl.innerHTML = chatEl.innerHTML + UserMessage('hello');
-        chatEl.innerHTML = chatEl.innerHTML + UserMessage('hello');
-        
-        chatEl.innerHTML = chatEl.innerHTML + BotMessage('hi');
+    if (e.key === 'a') {
+        chatEl.appendChild(generateMessage('gi', 'user'))
     }
 })
